@@ -36,6 +36,6 @@ tasks.withType<KotlinCompile> {
 
 tasks.shadowJar {
 	manifest {
-		attributes["Main-Class"] = "cn.jeff.prj04.AppMain"
+		attributes["Main-Class"] = "cn.jeff.app.magiccube.MagicCube"
 	}
 }

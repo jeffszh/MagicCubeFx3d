@@ -13,8 +13,8 @@
 			<padding>
 				<Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
 			</padding>
-			<Label text="Label"/>
-			<Button mnemonicParsing="false" text="Button"/>
+			<Label fx:id="label1" text="Label"/>
+			<Button onAction="#btnClick" mnemonicParsing="false" text="Button" fx:id="btn01"/>
 		</HBox>
 	</top>
 </BorderPane>
