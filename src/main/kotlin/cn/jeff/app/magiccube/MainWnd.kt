@@ -44,6 +44,10 @@ class MainWnd : View("3D魔方") {
 //			this.camera = camera
 //		})
 
+		j.myBox.material = PhongMaterial(Color.RED)
+		j.box2.material = PhongMaterial(Color.BLUE)
+
+		/*
 		val cam1 = PerspectiveCamera(true).apply {
 			transforms.addAll(
 				Rotate(-30.0, Rotate.Y_AXIS),
@@ -66,6 +70,7 @@ class MainWnd : View("3D魔方") {
 				})
 			}
 		}
+		*/
 	}
 
 	fun btnClick(actionEvent: ActionEvent) {
