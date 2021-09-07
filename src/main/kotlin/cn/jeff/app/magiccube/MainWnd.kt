@@ -44,8 +44,18 @@ class MainWnd : View("3D魔方") {
 //			this.camera = camera
 //		})
 
-		j.myBox.material = PhongMaterial(Color.RED)
-		j.box2.material = PhongMaterial(Color.BLUE)
+		j.subScn.root = group {
+			add(Box(4.0, 5.0, 6.0).apply {
+				material = PhongMaterial(Color.RED)
+			})
+		}
+		j.subScn.camera = PerspectiveCamera(true).apply {
+			transforms.addAll(
+				Rotate(-30.0, Rotate.Y_AXIS),
+				Rotate(-20.0, Rotate.X_AXIS),
+				Translate(0.0, 0.0, -15.0)
+			)
+		}
 
 		/*
 		val cam1 = PerspectiveCamera(true).apply {

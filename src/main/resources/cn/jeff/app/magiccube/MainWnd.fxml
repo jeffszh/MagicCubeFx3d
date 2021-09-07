@@ -4,7 +4,6 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 
 <BorderPane prefHeight="600.0" prefWidth="800.0"
 			style="-fx-font-family: 'Courier New'; -fx-font-size: 16;"
@@ -21,24 +20,11 @@
 	</top>
 	<center>
 		<Group fx:id="mainGroup" BorderPane.alignment="CENTER">
-			<SubScene fx:id="subScn" height="300.0" width="300.0" fill="aqua">
+			<SubScene fx:id="subScn" fill="aqua" height="300.0" width="300.0">
 				<root>
-					<Group>
-						<Box fx:id="myBox" depth="50.0" height="60.0" width="70.0"/>
-						<PerspectiveCamera translateZ="-15.0">
-							<rotationAxis>
-								<Point3D x="-20.0" y="-30.0"/>
-							</rotationAxis>
-						</PerspectiveCamera>
-					</Group>
+					<Region/>
 				</root>
 			</SubScene>
-			<PerspectiveCamera translateZ="-15.0">
-				<rotationAxis>
-					<Point3D x="-20.0" y="-30.0"/>
-				</rotationAxis>
-			</PerspectiveCamera>
-			<Box fx:id="box2" depth="5.0" height="5.0" width="5.0"/>
 		</Group>
 	</center>
 </BorderPane>
