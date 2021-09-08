@@ -7,8 +7,6 @@ import javafx.scene.PerspectiveCamera
 import javafx.scene.SubScene
 import javafx.scene.layout.BorderPane
 import javafx.scene.paint.Color
-import javafx.scene.paint.PhongMaterial
-import javafx.scene.shape.Box
 import javafx.scene.transform.Rotate
 import javafx.scene.transform.Translate
 import tornadofx.*
@@ -33,17 +31,16 @@ class MainWnd : View("3D魔方") {
 		root.center {
 			group {
 				add(SubScene(Group().apply {
-					// add(cam1)	// 这句有或者没有都一样行，例子中是有的，不明所以。
-					add(Box(4.0, 5.0, 6.0).apply {
-						material = PhongMaterial(Color.RED)
+					add(McBlock().apply {
+						transforms.add(Rotate(0.0, Rotate.Z_AXIS))
 					})
 				}, 640.0, 480.0).apply {
 					fill = Color.AQUA
 					camera = PerspectiveCamera(true).apply {
 						transforms.addAll(
-							Rotate(-30.0, Rotate.Y_AXIS),
+							Rotate(-45.0, Rotate.Y_AXIS),
 							Rotate(-20.0, Rotate.X_AXIS),
-							Translate(-0.0, 0.0, -15.0)
+							Translate(0.0, 0.0, -15.0)
 						)
 					}
 				})
