@@ -30,57 +30,25 @@ class MainWnd : View("3D魔方") {
 		j = loader.getController()
 		j.k = this
 
-//		j.myBox.material = PhongMaterial(Color.RED)
-//		val camera = PerspectiveCamera().apply {
-//			transforms.addAll(
-//				Rotate(-30.0, Rotate.Y_AXIS),
-//				Rotate(-20.0, Rotate.X_AXIS),
-//				Translate(0.0, 0.0, -15.0)
-//			)
-//		}
-//		j.mainGroup.add(camera)
-//		j.mainGroup.add(SubScene(j.mainGroup, 300.0, 300.0).apply {
-//			fill = Color.ALICEBLUE
-//			this.camera = camera
-//		})
-
-		j.subScn.root = group {
-			add(Box(4.0, 5.0, 6.0).apply {
-				material = PhongMaterial(Color.RED)
-			})
-		}
-		j.subScn.camera = PerspectiveCamera(true).apply {
-			transforms.addAll(
-				Rotate(-30.0, Rotate.Y_AXIS),
-				Rotate(-20.0, Rotate.X_AXIS),
-				Translate(0.0, 0.0, -15.0)
-			)
-		}
-
-		/*
-		val cam1 = PerspectiveCamera(true).apply {
-			transforms.addAll(
-				Rotate(-30.0, Rotate.Y_AXIS),
-				Rotate(-20.0, Rotate.X_AXIS),
-				Translate(-0.0, 0.0, -15.0)
-			)
-		}
-		val g1 = Group().apply {
-			// add(cam1)	// 这句有或者没有都一样行，例子中是有的，不明所以。
-			add(Box(4.0, 5.0, 6.0).apply {
-				material = PhongMaterial(Color.RED)
-			})
-		}
-
 		root.center {
 			group {
-				add(SubScene(g1, 300.0, 300.0).apply {
+				add(SubScene(Group().apply {
+					// add(cam1)	// 这句有或者没有都一样行，例子中是有的，不明所以。
+					add(Box(4.0, 5.0, 6.0).apply {
+						material = PhongMaterial(Color.RED)
+					})
+				}, 640.0, 480.0).apply {
 					fill = Color.AQUA
-					camera = cam1
+					camera = PerspectiveCamera(true).apply {
+						transforms.addAll(
+							Rotate(-30.0, Rotate.Y_AXIS),
+							Rotate(-20.0, Rotate.X_AXIS),
+							Translate(-0.0, 0.0, -15.0)
+						)
+					}
 				})
 			}
 		}
-		*/
 	}
 
 	fun btnClick(actionEvent: ActionEvent) {

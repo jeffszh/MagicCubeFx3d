@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -18,13 +17,4 @@
 			<Button fx:id="btn01" mnemonicParsing="false" onAction="#btnClick" text="Button"/>
 		</HBox>
 	</top>
-	<center>
-		<Group fx:id="mainGroup" BorderPane.alignment="CENTER">
-			<SubScene fx:id="subScn" fill="aqua" height="300.0" width="300.0">
-				<root>
-					<Region/>
-				</root>
-			</SubScene>
-		</Group>
-	</center>
 </BorderPane>
